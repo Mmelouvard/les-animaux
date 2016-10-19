@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="Index.css" />
+  <title>Mon Site web</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+</head>
+
+
+
+
+
+<script>
+function myFunction() {
+    alert("vous ne voulez vraiment pas me contacter??");
+	
+}
+function redimensionnement(){ 
+ 
+    var $image = $('img.superbg');
+    var image_width = $image.width(); 
+    var image_height = $image.height();     
+     
+    var over = image_width / image_height; 
+    var under = image_height / image_width; 
+     
+    var body_width = $(window).width(); 
+    var body_height = $(window).height(); 
+     
+    if (body_width / body_height >= over) { 
+      $image.css({ 
+        'width': body_width + 'px', 
+        'height': Math.ceil(under * body_width) + 'px', 
+        'left': '0px', 
+        'top': Math.abs((under * body_width) - body_height) / -2 + 'px' 
+      }); 
+    }  
+     
+    else { 
+      $image.css({ 
+        'width': Math.ceil(over * body_height) + 'px', 
+        'height': body_height + 'px', 
+        'top': '0px', 
+        'left': Math.abs((over * body_height) - body_width) / -2 + 'px' 
+      }); 
+    } 
+} 
+      
+$(document).ready(function(){
+
+    // Au chargement initial   
+    redimensionnement();
+     
+    // En cas de redimensionnement de la fenêtre
+    $(window).resize(function(){ 
+        redimensionnement(); 
+    }); 
+ 
+}); 
+</script>
+
+<body>
+  <img src="http://www.astrosurf.com/luxorion/Images/mer-vagues.jpg" class="superbg img-responsive" />
+  <script src="script/jquery.js" type="text/javascript"></script>
+  <script src="script/background.js" type="text/javascript"></script>	
+
+
+
+
+
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="http://www.ouest-france.fr/bretagne/lancieux-22770/est-pret-intervenir-chaque-instant-4363240"> <img src="img/logo.jpg" alt="Image"  width="45px" /></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="page d'accueil.html">Accueil</a></li>
+		<li><a href="CV.html">Mon CV</a></li>
+		
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=Tzl5sfHKAhc">Contact</a></li>
+		<li><a button onclick="myFunction()"></button></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+		<li><a target="_blank"  href="https://www.youtube.com/watch?v=Tzl5sfHKAhc" button onclick="myFunction()"><img src="img/croix_fermeture.png" border="0" alt="fermer" width="25px" <span class="glyphicon glyphicon-log-in"></span> </button> </a>
+      </ul>
+    </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" >
+	     
+		 <div class="item active">
+        <img src="https://don.snsm.org/sites/default/files/styles/image_gallery/public/snsm-cfi-paris-stage-mer-ns-quiberon-2015-75.jpg?itok=43JPag0C" alt="Chania" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>La Snsm</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Ours_brun_parcanimalierpyrenees_2.jpg" alt="cerf" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Un ours</h3>
+        </div>
+      </div>
+    </div>
+	
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container-fluid">
+<div class="container text-center">    
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="http://www.bateaux.com/src/applications/news/images-mag/snsm_4_512.jpg" class="img-responsive img-circle" style="width:100%" alt="Image">
+      <p>La SNSM</p>
+    </div>
+	    <div class="col-sm-4">
+      <div class="well">
+       <h2>La SNSM</h2>
+      </div>
+      <div class="well">
+       <h2>La licence SARII</h2>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="http://www.iut-brest.fr/files/10/LOGO_IUT_BREST_MORLAIX_BLEU_h116.png" class="img-responsive img-rounded" style="width:100%" alt="Image">
+      <p>LP SARII</p>    
+    </div>
+	</div>
+  </div>
+</div>
+
+ <div class="container">
+ <div class="text-center">
+  <h1>Contactez moi !!</h1>
+      <p>N'hesitez surtout pas ! </p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Brest</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Tel: +06 25 43 ****</p>
+      <p><span class="glyphicon glyphicon-envelope" ></span><A HREF="mailto:lemaitre-elie@hotmail.fr"> lemaitre-elie@hotmail.fr</A></p>
+
+  </div>
+</div>
+
+ <footer>
+  <p>Je remercie blabla</p>
+</footer>
+
+</body>
+</html>
